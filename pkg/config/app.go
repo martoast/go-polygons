@@ -14,9 +14,9 @@ var (
 )
 
 func Connect() {
-	err := godotenv.Load("../../netlify.toml")
-	if err != nil {
-		log.Fatal("Error loading .env file")
+	err := godotenv.Load()
+	if err == nil {
+		log.Println("Working with local env")
 	}
 	dbUser := os.Getenv("DB_User")
 	dbPass := os.Getenv("DB_Password")
