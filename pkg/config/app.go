@@ -14,7 +14,7 @@ var (
 )
 
 func Connect() {
-	err := godotenv.Load("netlify.toml")
+	err := godotenv.Load("../../netlify.toml")
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
